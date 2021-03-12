@@ -1,0 +1,81 @@
+<!-- form表单的简介
+表单时web程序和用户交互的主要途径之一，例如：搜索引擎，用户登录，注册等操作都离不开表单的使用
+常用表单元素
+-input
+	》text
+	》password
+	》radio
+	》checkbox
+	》hidden
+	》file
+	》button
+	》reset
+	》submit
+-select
+	》option
+-textarea -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <form name="f1"  action="/3Servlet_From/servlet/RegisterServlet" method="post">
+      <table border="0"><!-- 行为需要写全地址，不可以有遗漏包括大小写问题，然会出现404的错误 -->
+        <input type="hidden" name="userid">
+        <!-- 隐藏域是隐藏的在页面中没有显示，可以在查看源代码中看到 -->
+        <tr>
+          <td>用户名称：</td>
+          <td><input type="text" name="Username" ></td>
+        </tr>
+        <tr>
+          <td>密码：</td>
+          <td><input type="password" name="password" id="password"></td>
+        </tr> 
+        <tr> 
+        <tr>
+          <td>性别：</td>
+          <td><input type="radio" name="gender" value="1">男
+          <input type="radio" name="gender" value="2">女</td>
+        </tr>
+        <!-- radio形成的选项只可以单选，为圆形框 --> 
+        <tr>
+         <tr>
+          <td>爱好：</td>
+          <td><input type="checkbox" name="hobby" value="1">篮球
+          <input type="checkbox" name="hobby" value="2">足球</td>
+        </tr> 
+        <!-- chexkbox为方形框，其可以支持多选 -->
+         <tr>
+          <td>职位：</td>
+          <td>
+          	<select name = "position">
+          		<option value="ceo">CEO</option>
+          		<option value="cto">CTO</option>
+          		<option value="cfo">CFO</option>
+			</select>
+          </td>
+           <tr>
+          <td>备注：</td>
+          <td><textarea rows="10" cols="20" name="memo"></textarea></td>
+        </tr> 
+        <tr>
+        </tr> 
+        <!-- select是下拉列表 ,option中用来罗列下拉列表中的选项-->
+        <tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="注册"></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
